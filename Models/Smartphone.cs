@@ -24,9 +24,13 @@ namespace DesafioPOO.Models
         public void ReceberLigacao(string numeroLigante)
         {
             Console.WriteLine($"O número {numeroLigante} está te ligando");
-            Console.WriteLine("Desligou! \n  n");
+            Console.WriteLine("Desligou! \n  \n");
         }
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        public int valorMemoria(){
+            return this.Memoria;
+        }
+
+        public abstract void InstalarAplicativo(string nomeApp, int tamanho);
     }
 }

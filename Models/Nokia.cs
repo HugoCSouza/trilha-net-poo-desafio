@@ -9,10 +9,18 @@ namespace DesafioPOO.Models
             // Pode adicionar inicializações específicas da classe Nokia aqui, se necessário
         }
         // TODO: Sobrescrever o método "InstalarAplicativo"
-        public override void InstalarAplicativo(string nomeApp)
+        public override void InstalarAplicativo(string nomeApp, int tamanho)
         {
-            Console.WriteLine("Instalando aplicativo ...");
-            Console.WriteLine($"Aplicativo {nomeApp} Instalado \n \n");
+            int memoria = valorMemoria();
+            if (tamanho > memoria)
+            {
+                Console.WriteLine("Aplicativo Muito grande para o sistema \n");
+            }
+            else
+            {
+                Console.WriteLine("Instalando aplicativo ...");
+                Console.WriteLine($"Aplicativo {nomeApp} Instalado \n \n");
+            }
         }
     }
 }
